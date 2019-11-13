@@ -1,9 +1,21 @@
 package com.apple.loginform;
 
-public class WeChatForm {
-    public static void main(String[] args) {
-        LoginForm loginForm = new LoginForm();
+import javax.swing.*;
 
-        loginForm.setFrameLoginVisible(true);
+public class WeChatForm extends JFrame{
+
+    private JPanel panelMain;
+
+    public WeChatForm(){
+        setTitle("WeChat Form");
+        setSize(300, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        panelMain = new JPanel();
+        panelMain.setLayout(null);
+
+    }
+    public void setFrameWeChatVisible(Boolean visible){
+        setVisible(visible);
     }
 }

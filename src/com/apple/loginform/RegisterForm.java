@@ -1,6 +1,7 @@
 package com.apple.loginform;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,6 +12,8 @@ public class RegisterForm extends JFrame{
     private JTextField userText;
     private JLabel passwordLabel;
     private JPasswordField passwordText;
+    private JLabel userEmail;
+    private JTextField EmailText;
     private JButton backButton;
     private JButton registerButton;
 
@@ -20,7 +23,7 @@ public class RegisterForm extends JFrame{
 
     public RegisterForm(){
         setTitle("Register Form");
-        setSize(280, 160);
+        setSize(280, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panelRegister = new JPanel();
@@ -42,12 +45,20 @@ public class RegisterForm extends JFrame{
         passwordText.setBounds(100,50,165,25);
         panelRegister.add(passwordText);
 
+        userEmail = new JLabel("Email:");
+        userEmail.setBounds(10,80,80,25);
+        panelRegister.add(userEmail);
+
+        EmailText = new JTextField(20);
+        EmailText.setBounds(100,80,165,25);
+        panelRegister.add(EmailText);
+
         backButton = new JButton("back");
-        backButton.setBounds(100, 100, 80, 25);
+        backButton.setBounds(100, 130, 80, 25);
         panelRegister.add(backButton);
 
         registerButton = new JButton("register");
-        registerButton.setBounds(10, 100, 80, 25);
+        registerButton.setBounds(10, 130, 80, 25);
         panelRegister.add(registerButton);
 
         add(panelRegister);
